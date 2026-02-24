@@ -1,0 +1,73 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_02T2IN6GIY9MR3xbt3Nx8xBgfmSdppVib5Y",
+    "name": "test1",
+    "title": "test1",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": true,
+      "description": "test1 ",
+      "display_name": "test1",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": true,
+        "target_group": {
+          "target_group_id": "target_group_02T2IT0X62WX11kIFrqZYUaRlq5nAfKgTeN",
+          "run_on_all_targets": false,
+          "selected_target_types": [
+            "web-service.endpoint"
+          ],
+          "use_criteria": {
+            "choose_target_using_algorithm": "choose_all_with_matching_criteria",
+            "conditions": [
+              {
+                "operator": "mw",
+                "left_operand": "$targetgroup.target_group_02T2IT0X62WX11kIFrqZYUaRlq5nAfKgTeN.common.display_name$",
+                "right_operand": "*"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "object_type": "definition_workflow",
+    "categories": [
+      "category_023LORSSPJ2KG63dNX47PVlKn7caGzkB7UP"
+    ]
+  },
+  "target_groups": {
+    "target_group_02T2IT0X62WX11kIFrqZYUaRlq5nAfKgTeN": {
+      "unique_name": "target_group_02T2IT0X62WX11kIFrqZYUaRlq5nAfKgTeN",
+      "name": "jakdahl-targets",
+      "title": "jakdahl-targets",
+      "type": "generic.target_group",
+      "base_type": "target_group",
+      "version": "1.0.0",
+      "targets": [
+        {
+          "data_target_type": "web-service.endpoint",
+          "view_target_type": "web-service.endpoint",
+          "include_all_targets": false,
+          "selected_target_ids": [
+            "$module_target;Webex;securex:ao:webex;webex-api$"
+          ]
+        }
+      ],
+      "object_type": "target_group"
+    }
+  },
+  "module_targets": [
+    {
+      "module_type": "Webex",
+      "external_id": "securex:ao:webex",
+      "proxy_endpoint_metadata_id": "webex-api"
+    }
+  ]
+}
