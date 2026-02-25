@@ -1,0 +1,73 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_02TQQZB8F349H79HGKqpURMB04QJFqCNjC8",
+    "name": "test3",
+    "title": "test3",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "test3",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_02TQQZYYVRMDU4nLbbAoSxA1BEUxrCoWshf",
+        "name": "Cisco Secure Cloud Analytics - Get Observations",
+        "title": "Cisco Secure Cloud Analytics - Get Observations",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Cisco Secure Cloud Analytics - Get Observations",
+          "input": {
+            "variable_workflow_01PP78NIDST9C09GS0uUdAxK1nHKpVGnu9a": 0,
+            "variable_workflow_01PP78NIDSXWF2xOHE6zNMj3V541bwMRdJS": "",
+            "variable_workflow_01PP78NIDSZAL0STnHpeIhx8G9esEiuLFWu": "",
+            "variable_workflow_01PP78NIDT0IN4NFUNSZOOaJQlgXCfmMX8F": "0001-01-01T00:00:00+00:00",
+            "variable_workflow_01PP78NIDT1Q16UCUrJUxs5IHKEyEk0m0L9": 100,
+            "variable_workflow_01PP78NIDT53H4uInkL50Hdyz4U893gwF6D": "0001-01-01T00:00:00+00:00"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "$module_target;Secure Cloud Analytics;securex:ao:sca;cisco-secure-cloud-analytics-api$",
+            "target_type": "web-service.endpoint"
+          },
+          "workflow_id": "definition_workflow_01PP78NIJUWVP2ZZWBtpw73YvdxQ4JnNlIM",
+          "workflow_name": "Cisco Secure Cloud Analytics - Get Observations"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "atomic_workflows": [
+    "definition_workflow_01PP78NIJUWVP2ZZWBtpw73YvdxQ4JnNlIM"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_01PP78NIJUWVP2ZZWBtpw73YvdxQ4JnNlIM"
+  ],
+  "module_targets": [
+    {
+      "module_type": "Secure Cloud Analytics",
+      "external_id": "securex:ao:sca",
+      "proxy_endpoint_metadata_id": "cisco-secure-cloud-analytics-api"
+    }
+  ]
+}
